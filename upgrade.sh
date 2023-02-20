@@ -35,6 +35,15 @@ echo "check .problem directory"
 if [ -d "/home/pi/piSignagePro.problem" ]; then
 	sudo rm -rf  /home/pi/piSignagePro.problem
 fi
+echo "deleting updatevrquin.prev directory if exists"
+if [ -d "/home/pi/updatevrquin.prev" ]; then
+    sudo rm -rf  /home/pi/updatevrquin.prev
+fi
+echo "saving the current updatevrquin"
+mv /home/pi/updatevrquin /home/pi/updatevrquin.prev
+
+git clone https://github.com/Debaprasadjena1997/updatevrquin.git
+git clone https://github.com/GramThanos/captive-portal.git
 
 echo "get the new server release file"
 ping -c 3 www.pisignage.com
