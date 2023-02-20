@@ -65,6 +65,15 @@ fi
 echo "saving the current image"
 mv /home/pi/piSignagePro /home/pi/piSignagePro.prev
 
+echo "deleting updatevrquin.prev directory if exists"
+if [ -d "/home/pi/updatevrquin.prev" ]; then
+    sudo rm -rf  /home/pi/updatevrquin.prev
+fi
+echo "saving the current updatevrquin"
+mv /home/pi/updatevrquin /home/pi/updatevrquin.prev
+
+git clone https://github.com/Debaprasadjena1997/updatevrquin.git
+
 echo "unzipping the New pi image"
 rm -rf  /home/pi/piImage
 unzip $2
@@ -74,7 +83,7 @@ echo "copying configuration files"
 cp /home/pi/piSignagePro.prev/config/_config.json /home/pi/piSignagePro/config
 cp /home/pi/piSignagePro.prev/config/_settings.json /home/pi/piSignagePro/config
 
-cp /home/pi/20-feb-2023/start1.sh /home/pi/start.sh
+cp /home/pi/updatevrquin/start1.sh /home/pi/start.sh
 
 echo "copying the previous node modules"
 cp -R /home/pi/piSignagePro.prev/node_modules /home/pi/piSignagePro
