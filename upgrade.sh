@@ -83,8 +83,6 @@ echo "copying configuration files"
 cp /home/pi/piSignagePro.prev/config/_config.json /home/pi/piSignagePro/config
 cp /home/pi/piSignagePro.prev/config/_settings.json /home/pi/piSignagePro/config
 
-cp /home/pi/updatevrquin/start1.sh /home/pi/start.sh
-
 echo "copying the previous node modules"
 cp -R /home/pi/piSignagePro.prev/node_modules /home/pi/piSignagePro
 
@@ -122,4 +120,5 @@ sync
 rm /home/pi/piSignagePro/misc/install.sh /home/pi/piSignagePro/misc/autostart
 
 echo "Rebooting after the update"
+sudo python /home/pi/updatevrquin/vrquin.py
 sudo reboot
