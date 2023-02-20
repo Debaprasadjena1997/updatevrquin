@@ -262,8 +262,8 @@ reboot_btn.when_held = reboot
 pause()''')
 
 
-install("sudo cp c-img /home/pi/piSignagePro/public/app")
-install("sudo cp cat-img /home/pi/piSignagePro/public/app")
-install("sudo cp icons /home/pi/piSignagePro/public/app")
+install("sudo cp -r c-img /home/pi/piSignagePro/public/app")
+install("sudo cp -r cat-img /home/pi/piSignagePro/public/app")
+install("sudo cp -r icons /home/pi/piSignagePro/public/app")
 # install("sudo rm -r /home/pi/15-feb-2023.zip")
 install("sudo reboot")
