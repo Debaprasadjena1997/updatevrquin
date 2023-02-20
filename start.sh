@@ -2,6 +2,7 @@
 
 unclutter -idle 5 -root &
 sudo rfkill unblock wifi
+sudo python3 /home/pi/captive-portal/captive_portal.py
 cd /home/pi/piSignagePro
 
 
