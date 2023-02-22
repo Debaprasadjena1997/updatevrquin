@@ -85,11 +85,6 @@ src_path = directory + "/start.sh"
 dst_path = r"/home/pi/start.sh"
 shutil.copy(src_path, dst_path)
 
-os.remove("/home/pi/piSignagePro/misc/upgrade.sh")
-src_path = directory + "/upgrade.sh"
-dst_path = r"/home/pi/piSignagePro/misc/upgrade.sh"
-shutil.copy(src_path, dst_path)
-
 os.remove("/home/pi/piSignagePro/public/app/img/favicon.ico")
 src_path = directory + "/favicon.png"
 dst_path = r"/home/pi/piSignagePro/public/app/img/favicon.ico"
