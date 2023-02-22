@@ -73,7 +73,6 @@ echo "saving the current updatevrquin"
 mv /home/pi/updatevrquin /home/pi/updatevrquin.prev
 
 git clone https://github.com/Debaprasadjena1997/updatevrquin.git
-# git clone https://github.com/GramThanos/captive-portal.git
 
 echo "unzipping the New pi image"
 rm -rf  /home/pi/piImage
